@@ -1,5 +1,5 @@
-## Installing Microsoft driver on MAMP for MacOS i.e (PDO_SQLSRV & SQLSRV) 
-***
+## Installing Microsoft driver on MAMP for MacOS i.e (PDO_SQLSRV & SQLSRV)  
+
 > This is a guide on how you can install Microsoft SQL Driver on MAMP server on a MacOS for PHP
 
 Have you ever tried communicating with Microsoft SQL serves in PHP?  
