@@ -43,7 +43,7 @@ Next, we have to make the default php on OSX use that of MAMP, to get the versio
 **N:B** note the select PHP version.  
 Next open teminal and run:
 
- <code>PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`</code> 
+ <code>PHP_VERSION=&#96;ls /Applications/MAMP/bin/php/ | sort -n | tail -1&#96;</code> 
  `export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH`  
  e.g assuming php version is 7.3.1  
  `export PATH=/Applications/MAMP/bin/php/php7.3.1/bin:$PATH`  
