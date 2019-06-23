@@ -23,7 +23,9 @@ Now i assume you have your MAMP installed successfully.
 If you don't have MAMP installed kindly goto [MAMP & MAMP PRO](https://www.mamp.info/en/downloads/) to get it installed.  
 If you have MAMP installed successfully you can follow this steps.  
 
+
 **1. STEP ONE: Install Brew**  
+
 If you don't have Brew installed, open terminal and run:  
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`  
@@ -33,7 +35,10 @@ The above instruction would install Brew. next run:
 `brew tap`  
 `brew tap homebrew/core`
 
+
+
 **2. STEP TWO: Use MAMP's version of PHP instead of the default on OSX**  
+
 Next, we have to make the default php on OSX use that of MAMP, to get the version the default php used by your MAMP:  
 - Open your MAMP windown  
 - Click on MAMP on the menu bar  
@@ -56,7 +61,10 @@ In order to verify that the operation was successfull, lets check the PHP versio
 
 You should now see the the same php version on your MAMP on your terminal also.  
 
+
+
 **3. STEP THREE: Install prerequisites (Microsoft ODBC Driver 17 for SQL Server)**  
+
 Next, we have to install the prerequsites for the driver by running the following code:  
 
 
@@ -66,7 +74,34 @@ Next, we have to install the prerequsites for the driver by running the followin
 `brew install msodbcsql17 mssql-tools`  
 
 In addition, you may need to install the GNU make tools by running:  
+
 `brew install autoconf automake libtool`  
+
+
+
+**4. STEP FOUR: Install the PHP drivers for Microsoft SQL Server**  
+
+Next, we proceed to installing the PHP drivers i.e **pdo_sqlsrv.so & sqlsrv.so**:  
+
+First, we navigate to the php version file in mamp  
+
+`cd /Applications/MAMP/bin/php/${PHP_VERSION}/bin`  
+
+e.g assuming php version is 7.3.1  
+
+`cd /Applications/MAMP/bin/php/php7.3.1/bin`  
+
+Next, we download the drivers by running:  
+
+`sudo pecl install sqlsrv`  
+`sudo pecl install pdo_sqlsrv`  
+
+> Downloading the drivers might take some time  
+
+
+
+
+
 
 
 
