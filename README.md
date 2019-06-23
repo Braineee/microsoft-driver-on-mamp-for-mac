@@ -40,13 +40,34 @@ Next, we have to make the default php on OSX use that of MAMP, to get the versio
 - Click on Preference or use the keyboard shortcut `command + ,`
 - Click on the **PHP** tab.
 
-**N:B** note the select PHP version.  
+**N:B** note the selected PHP version.  
 Next open teminal and run:
 
- <code>PHP_VERSION=&#96;ls /Applications/MAMP/bin/php/ | sort -n | tail -1&#96;</code>  
- `export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH`  
- e.g assuming php version is 7.3.1  
- `export PATH=/Applications/MAMP/bin/php/php7.3.1/bin:$PATH`  
+<code>PHP_VERSION=&#96;ls /Applications/MAMP/bin/php/ | sort -n | tail -1&#96;</code>  
+`export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH`  
+
+e.g assuming php version is 7.3.1  
+
+`export PATH=/Applications/MAMP/bin/php/php7.3.1/bin:$PATH`  
+
+In order to verify that the operation was successfull, lets check the PHP version on the terminal by running the following command:  
+
+<code>php -v</code>  
+
+You should now see the the same php version on your MAMP on your terminal also.  
+
+**3. STEP THREE: Install prerequisites (Microsoft ODBC Driver 17 for SQL Server)**  
+Next, we have to install the prerequsites for the driver by running the following code:  
+
+
+<code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>  
+`brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release`  
+`brew update`  
+`brew install msodbcsql17 mssql-tools`  
+
+In addition, you may need to install the GNU make tools by running:  
+`brew install autoconf automake libtool`  
+
 
 
 
