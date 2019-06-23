@@ -10,7 +10,7 @@ All i did was to download the drivers from [Microsoft Drivers for PHP for SQL Se
 `extension=php_sqlsrv_72_ts.dll`  
 `extension=php_pdo_sqlsrv_72_ts.dll`  
 
-After adding the above to the **php.ini** file i saved it and restarted my Apache server and that was all, i confirmed by going to **phpinfo.php** page on the xampp localhost admin page and <code>ctrl + F</code> to find anything relating to **sqlsrv**.  
+After adding the above to the **php.ini** file i saved it and restarted my Apache server and that was all, i confirmed by going to **phpinfo.php** page on the xampp localhost admin page and <code>command + F</code> to find anything relating to **sqlsrv**.  
 
 
 > Whew!, Thats a whole lot of information at a go.  
@@ -35,16 +35,18 @@ The above instruction would install Brew. next run:
 
 **2. STEP TWO: Use MAMP's version of PHP instead of the default on OSX**  
 Next, we have to make the default php on OSX use that of MAMP, to get the version the default php used by your MAMP:  
-- open your MAMP windown  
+- Open your MAMP windown  
 - Click on MAMP on the menu bar  
 - Click on Preference or use the keyboard shortcut `command + ,`
 - Click on the **PHP** tab.
 
-N:B note the select PHP version.  
+**N:B** note the select PHP version.  
 Next open teminal and run:
 
- `PHP_VERSION=`&#96;`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`&#96;  
- `export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH` e.g assuming php version is 7.3.1 `export PATH=/Applications/MAMP/bin/php/php7.3.1/bin:$PATH`  
+ <code>PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`</code> 
+ `export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH`  
+ e.g assuming php version is 7.3.1  
+ `export PATH=/Applications/MAMP/bin/php/php7.3.1/bin:$PATH`  
 
 
 
