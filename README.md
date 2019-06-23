@@ -19,6 +19,34 @@ After adding the above to the **php.ini** file i saved it and restarted my Apach
 ### Now lets get to installing the same driver on PHP on MAMP for MacOS.  
 
 
-Now i assume you have your MAMP installed successfully.
+Now i assume you have your MAMP installed successfully.  
+If you don't have MAMP installed kindly goto [MAMP & MAMP PRO](https://www.mamp.info/en/downloads/) to get it installed.  
+If you have MAMP installed successfully you can follow this steps.  
+
+**1. STEP ONE: Install Brew**  
+If you don't have Brew installed, open terminal and run:  
+
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`  
+
+The above instruction would install Brew. next run:  
+
+`brew tap`  
+`brew tap homebrew/core`
+
+**2. STEP TWO: Use MAMP's version of PHP instead of the default on OSX**  
+Next, we have to make the default php on OSX use that of MAMP, to get the version the default php used by your MAMP:  
+- open your MAMP windown  
+- Click on MAMP on the menu bar  
+- Click on Preference or use the keyboard shortcut `command + ,`
+- Click on the **PHP** tab.
+
+N:B note the select PHP version.  
+Next open teminal and run:
+
+ `PHP_VERSION=`&#96;`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`&#96;  
+ `export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH` e.g assuming php version is 7.3.1 `export PATH=/Applications/MAMP/bin/php/php7.3.1/bin:$PATH`  
+
+
+
 
 
