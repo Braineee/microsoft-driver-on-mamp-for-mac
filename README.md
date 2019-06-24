@@ -40,7 +40,7 @@ The above instruction would install Brew. next run:
 **2. STEP TWO: Use MAMP's version of PHP instead of the default on OSX**  
 
 Next, we have to make the default php on OSX use that of MAMP, to get the version the default php used by your MAMP:  
-- Open your MAMP windown  
+- Open your MAMP window  
 - Click on MAMP on the menu bar  
 - Click on Preference or use the keyboard shortcut `command + ,`
 - Click on the **PHP** tab.
@@ -98,6 +98,44 @@ Next, we download the drivers by running:
 
 > Downloading the drivers might take some time  
 
+After the download is complete, we then have to add the name of the newly installed driver extention to the **php.ini** file to completet the installation process.  
+
+**N:B** this would be stated on the terminal at the end of the download of the drivers.
+
+to complete the installation:
+
+- Copy the downloaded driver extension name on the terminal i.e `extension=pdo_sqlsrv.so & extension=sqlsrv.so`.
+- Navigate to **/Applications/MAMP/bin/php/${PHP_VERSION}/config/** on finder.
+- Open the **php.ini** file with any text editor.
+- Use the keyboard shortcut `command + F` to search for the word extension.
+- Paste the copied driver extension names below the listed extension.
+- Use the keyboard shortcut `command + S` to save the file and then close the file.
+- Finally restart the MAMP in order to restart the Apache server.  
+
+In order to verify if the installation was successfull, Open the MAMP localhost page on the browser.
+
+> The localhost page shold automatically be open on a browser when you restart MAMP  
+
+Click on the `php info` link to get to the phpinfo.php page.  
+
+Use the keyboard shortcut `command + F` to search for the word *'sqlsrv'* you should now see the sqlsrv extentions pop up on the page. and you are done.  
+
+***
+
+### For reference purpose you can visit.  
+
+- [Installation Tutorial for the Microsoft Drivers for PHP for SQL Server](https://docs.microsoft.com/en-us/sql/connect/php/installation-tutorial-linux-mac?view=sql-server-2017).  
+
+- [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017).  
+
+- [How to override the path of PHP to use the MAMP path](https://stackoverflow.com/questions/4145667/how-to-override-the-path-of-php-to-use-the-mamp-path).
+
+- [Installation Tutorial for the Microsoft Drivers for PHP for SQL Server - video tutorial](https://www.youtube.com/watch?v=PRH04PxZpUk).
+
+
+Made with love from David:
+
+[twitter @alindavidsin](https://twitter.com/alindavidsin02).  
 
 
 
