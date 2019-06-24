@@ -39,7 +39,7 @@ The above instruction would install Brew. next run:
 
 **2. STEP TWO: Use MAMP's version of PHP instead of the default on OSX**  
 
-Next, we have to make the default php on OSX use that of MAMP, to get the version the default php used by your MAMP:  
+Next, we have to make the default php on OSX use that of MAMP, to get the default version of php used by your MAMP:  
 - Open your MAMP window  
 - Click on MAMP on the menu bar  
 - Click on Preference or use the keyboard shortcut `command + ,`
@@ -67,8 +67,6 @@ You should now see the the same php version on your MAMP on your terminal also.
 
 Next, we have to install the prerequsites for the driver by running the following code:  
 
-
-<code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>  
 `brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release`  
 `brew update`  
 `brew install msodbcsql17 mssql-tools`  
@@ -98,9 +96,9 @@ Next, we download the drivers by running:
 
 > Downloading the drivers might take some time  
 
-After the download is complete, we then have to add the name of the newly installed driver extention to the **php.ini** file to completet the installation process.  
+After the download is complete, we then have to add the name of the newly installed driver extention to the **php.ini** file to complete the installation process.  
 
-**N:B** this would be stated on the terminal at the end of the download of the drivers.
+> this would be stated on the terminal at the end of the download of the drivers.
 
 to complete the installation:
 
@@ -135,7 +133,7 @@ Use the keyboard shortcut `command + F` to search for the word *'sqlsrv'* you sh
 
 Made with love from David:
 
-[twitter @alindavidsin](https://twitter.com/alindavidsin02).  
+[twitter @alindavidsin02](https://twitter.com/alindavidsin02).  
 
 
 
